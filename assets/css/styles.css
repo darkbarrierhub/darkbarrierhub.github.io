@@ -48,6 +48,9 @@ h2 {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 footer {
@@ -55,7 +58,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem;
-  position: fixed;
   width: 100%;
   bottom: 0;
 }
@@ -67,4 +69,29 @@ footer {
     right: 10px;
     height: 100px;
     width: auto;
+}
+
+.app-item {
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  margin: 15px;
+}
+
+.app-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.app-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.app-item a {
+  text-decoration: none;
+  color: inherit;
 }
