@@ -17,8 +17,23 @@ document.querySelector('.download-button').addEventListener('click', function(e)
     const userConfirmed = confirm('Do you want to download this app?');
 
     if (userConfirmed) {
-        // Redirect to the download link
-        window.location.href = this.getAttribute('href');
+        // Simulate file renaming (note: actual renaming must be done manually by the user or server-side)
+        let downloadUrl = this.getAttribute('href');
+        let fileName = downloadUrl.split('/').pop();
+        let newFileName = fileName;
+
+        // Add suffix for potential file conflicts
+        let suffix = 1;
+        while (false /* check if file with newFileName already exists */) {
+            newFileName = fileName.replace(/(\d+)?(\.[^.]+)?$/, `${suffix}$2`);
+            suffix++;
+        }
+
+        // Simulate file download with modified file name (this will not change the file name on disk)
+        window.location.href = downloadUrl;
+
+        // Notify user
+        alert(`Download started for ${newFileName}`);
     }
 });
 
