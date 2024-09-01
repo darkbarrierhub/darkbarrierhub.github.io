@@ -33,10 +33,13 @@ footer {
 .banner img {
     width: 100%;
     height: 440px;
+    object-fit: cover; /* Ensure the image covers the banner area */
 }
 
 .app-details {
     display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items in column layout */
     padding: 2rem;
     background-color: #fff;
     border-radius: 8px;
@@ -46,6 +49,7 @@ footer {
 
 .app-logo {
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .app-logo img {
@@ -73,7 +77,7 @@ footer {
 }
 
 .app-info {
-    margin-left: 2rem;
+    text-align: center; /* Center align text for better appearance */
 }
 
 .app-info h1 {
@@ -153,4 +157,62 @@ footer {
 .read-less:hover {
     text-decoration: underline; /* Add underline on hover for better accessibility */
     color: #555; /* Optional: Change hover color */
+}
+
+/* Media Queries for Mobile and Tablet */
+
+/* Mobile (S-320px) */
+@media (max-width: 320px) {
+    .banner img {
+        height: 250px; /* Reduce banner height for smaller screens */
+    }
+
+    .app-details {
+        padding: 1rem;
+    }
+
+    .app-logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .download-button {
+        padding: 0.5rem 1rem;
+    }
+
+    .app-info h1 {
+        font-size: 1.5rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 images per row */
+    }
+}
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+    .banner img {
+        height: 350px; /* Adjust banner height for tablets */
+    }
+
+    .app-details {
+        padding: 1.5rem;
+    }
+
+    .app-logo img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .download-button {
+        padding: 0.75rem 1.25rem;
+    }
+
+    .app-info h1 {
+        font-size: 1.75rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(4, 1fr); /* Show 4 images per row */
+    }
 }
