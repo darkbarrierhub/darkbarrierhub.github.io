@@ -13,27 +13,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 document.querySelector('.download-button').addEventListener('click', function(e) {
     e.preventDefault();
 
-    // Confirm the download
     const userConfirmed = confirm('Do you want to download this app?');
 
     if (userConfirmed) {
-        // Simulate file renaming (note: actual renaming must be done manually by the user or server-side)
         let downloadUrl = this.getAttribute('href');
-        let fileName = downloadUrl.split('/').pop();
-        let newFileName = fileName;
-
-        // Add suffix for potential file conflicts
-        let suffix = 1;
-        while (false /* check if file with newFileName already exists */) {
-            newFileName = fileName.replace(/(\d+)?(\.[^.]+)?$/, `${suffix}$2`);
-            suffix++;
-        }
-
-        // Simulate file download with modified file name (this will not change the file name on disk)
         window.location.href = downloadUrl;
+    }
+});
 
-        // Notify user
-        alert(`Download started for ${newFileName}`);
+// Fullscreen Image Viewer
+const fullscreenViewer = document.getElementById('fullscreen-viewer');
+const fullscreenImage = document.getElementById('fullscreen-image');
+
+document.querySelectorAll('.image-gallery img').forEach(img => {
+    img.addEventListener('click', function() {
+        fullscreenImage.src = this.src;
+        fullscreenViewer.style.display = 'flex';
+    });
+});
+
+document.querySelector('.close-btn').addEventListener('click', function() {
+    fullscreenViewer.style.display = 'none';
+});
+
+fullscreenViewer.addEventListener('click', function(e) {
+    if (e.target !== fullscreenImage) {
+        fullscreenViewer.style.display = 'none';
     }
 });
 

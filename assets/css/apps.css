@@ -85,3 +85,68 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.image-gallery img {
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.fullscreen-viewer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.fullscreen-viewer img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
+
+.read-more,
+.read-less {
+    color: inherit; /* Inherit color from parent element */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.read-more:hover,
+.read-less:hover {
+    text-decoration: underline; /* Add underline on hover for better accessibility */
+    color: #555; /* Optional: Change hover color */
+}
