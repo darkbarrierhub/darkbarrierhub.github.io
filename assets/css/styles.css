@@ -1,14 +1,4 @@
 /* General Styles */
-*{
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
 
 /* Header Styles */
 header {
@@ -97,16 +87,6 @@ h2 {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-/* Footer Styles */
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  width: 100%;
-  bottom: 0;
 }
 
 /* App Item Styles */
@@ -226,13 +206,4 @@ footer {
     font-size: 10px;
   }
 
-  footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-    bottom: 0;
-    font-size: smaller;
-  }
 }

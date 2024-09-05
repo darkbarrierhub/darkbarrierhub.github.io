@@ -1,26 +1,10 @@
 /* General Styles */
-*{
-    box-sizing: border-box;
-  }
-  
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
-.top-bar, footer {
+.top-bar {
     background-color: #333;
     color: #fff;
     text-align: left;
     padding: 0.5rem 1rem;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    width: 100%;
-    position: relative;
-    bottom: 0;
 }
 
 .top-bar-link {
@@ -66,7 +50,7 @@ footer {
 .download-button {
     display: block;
     padding: 0.75rem 1.5rem;
-    background-color: #0f9d58;
+    background-color: #02893c;
     color: #fff;
     text-decoration: none;
     border-radius: 4px;
@@ -218,14 +202,6 @@ footer {
 
     .image-gallery {
         grid-template-columns: repeat(4, 1fr); /* Show 4 images per row */
-    }
-    footer {
-        text-align: center;
-        padding: 1rem;
-        width: 100%;
-        position: relative;
-        bottom: 0;
-        font-size: small;
     }
     
 }
