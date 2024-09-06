@@ -1,12 +1,4 @@
 /* General Styles */
-*{
-    box-sizing: border-box;
-  }
-  
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
 .top-bar, footer {
     background-color: #333;
