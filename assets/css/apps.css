@@ -215,13 +215,5 @@ footer {
     .image-gallery {
         grid-template-columns: repeat(4, 1fr); /* Show 4 images per row */
     }
-    footer {
-        text-align: center;
-        padding: 1rem;
-        width: 100%;
-        position: relative;
-        bottom: 0;
-        font-size: small;
-    }
     
 }
