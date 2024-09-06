@@ -77,12 +77,6 @@ footer {
     .item-list h2 {
         font-size: 1.2em;
     }
-
-    footer {
-
-        position: fixed;
-
-    }
 }
 
 @media (max-width: 768px) {
